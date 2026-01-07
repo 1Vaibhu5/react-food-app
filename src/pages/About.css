@@ -1,0 +1,72 @@
+.about-container {
+  width: 100%;
+  height: 100vh; /* Full screen — no scrolling */
+  position: relative;
+
+  background-image: url("/src/asstes/About\ img.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Image fixed, content scroll nahi */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+}
+
+/* Dark overlay so text becomes clearly visible */
+.about-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 1;
+}
+
+.about-content {
+  position: relative;
+  z-index: 2;
+
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(5px);
+
+  padding: 40px;
+  border-radius: 18px;
+  max-width: 800px;
+  text-align: center;
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+
+  color: #fff;
+}
+
+/* Heading Style */
+.about-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #ffb347; /* golden-orange */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Paragraph Style */
+.about-content p {
+  font-size: 1.3rem;
+  line-height: 1.7;
+  margin-bottom: 20px;
+  color: #f5f5f5;
+  font-weight: 300;
+}
+
+/* Small section titles */
+.about-content h2 {
+  font-size: 2rem;
+  margin-top: 25px;
+  color: #ffcc66;
+  text-decoration: underline;
+}

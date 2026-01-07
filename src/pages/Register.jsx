@@ -1,31 +1,26 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-export default function Login() {
+export default function Register() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
-  const handleLogin = (e) => {
+  const handleRegister = (e) => {
     e.preventDefault();
 
-    const savedEmail = localStorage.getItem("reg_email");
-    const savedPassword = localStorage.getItem("reg_password");
+    localStorage.setItem("reg_email", email);
+    localStorage.setItem("reg_password", password);
 
-    if (email === savedEmail && password === savedPassword) {
-      localStorage.setItem("foodbite_auth", "true");
-      alert("Login Successful!");
-      navigate("/");
-    } else {
-      alert("Invalid Email or Password");
-    }
+    alert("Registration Successful!");
+    navigate("/login");
   };
 
   return (
     <div style={styles.container}>
-      <h2 style={styles.heading}>Login</h2>
+      <h2 style={styles.heading}>Register</h2>
 
-      <form onSubmit={handleLogin} style={styles.form}>
+      <form onSubmit={handleRegister} style={styles.form}>
         <input
           type="email"
           placeholder="Enter Email"
@@ -45,7 +40,7 @@ export default function Login() {
         />
 
         <button type="submit" style={styles.button}>
-          Login
+          Register
         </button>
       </form>
     </div>
