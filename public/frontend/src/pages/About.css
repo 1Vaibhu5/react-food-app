@@ -3,7 +3,7 @@
   height: 100vh; /* Full screen — no scrolling */
   position: relative;
 
-  background-image: url("/src/asstes/About\ img.jpg");
+  background-image: url("/src/assetsimg/About\ img.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

@@ -13,16 +13,16 @@
 /* Background images sequence */
 @keyframes slide {
   0% {
-    background-image: url("/src/asstes/food\ 1st\ wallpaper.jpg");
+    background-image: url("/src/assetsimg/food\ 1st\ wallpaper.jpg");
   }
   33% {
-    background-image: url("/src/asstes/food\ 2n\ wallpaper.jpg");
+    background-image: url("/src/assetsimg/food\ 2n\ wallpaper.jpg");
   }
   66% {
-    background-image: url("/src/asstes/food\ 3rd\ wallpaper.jpg");
+    background-image: url("/src/assetsimg/food\ 3rd\ wallpaper.jpg");
   }
   100% {
-    background-image: url("/src/asstes/food\ 4th\ wallpaper.jpg");
+    background-image: url("/src/assetsimg/food\ 4th\ wallpaper.jpg");
   }
 }
 
